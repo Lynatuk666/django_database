@@ -1,0 +1,10 @@
+from django.db import models
+
+
+class Phone(models.Model):
+    name = models.CharField(max_length=50, default="test")
+    price = models.PositiveIntegerField(default=1)
+    image = models.URLField(default="https.//google.com")
+    release_date = models.DateField(default="2000-01-01")
+    lte_exists = models.BooleanField(default=False)
+    slug = models.SlugField(default="test", unique=True)
